@@ -14,7 +14,7 @@ public class AdminSteps {
     AddUserPage addUserPage = new AddUserPage();
 
     int beforeCount, afterCount;
-    String newUser = "autoUser123";
+    String newUser = "testuser123";
 
     @Given("User logs in with username {string} and password {string}")
     public void user_logs_in_with_username_and_password(String user, String pass) {
@@ -30,7 +30,7 @@ public class AdminSteps {
     @When("User adds a new user")
     public void user_adds_a_new_user() {
         adminPage.clickAdd();
-        addUserPage.addUser("Mohamed Salah", newUser, "Admin@123");
+        addUserPage.addUser("test", newUser, "Password@123");
     }
 
     @Then("User count should increase by {int}")
